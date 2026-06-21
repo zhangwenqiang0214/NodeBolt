@@ -5,10 +5,12 @@ set -e
 cd "$(dirname "$0")"
 CONFIG="${1:-release}"
 
-echo "==> 编译 ($CONFIG)"
-swift build -c "$CONFIG"
+echo "==> 编译 ($CONFIG, Universal: arm64 + x86_64)"
+swift build -c "$CONFIG" --arch arm64 --arch x86_64
 
-BIN=".build/$CONFIG/NodeBolt"
+# 通用二进制输出在 .build/apple/Products/<Config>/
+CONFIG_CAP="$(tr '[:lower:]' '[:upper:]' <<< "${CONFIG:0:1}")${CONFIG:1}"
+BIN=".build/apple/Products/$CONFIG_CAP/NodeBolt"
 APP="dist/NodeBolt.app"
 
 echo "==> 组装 $APP"

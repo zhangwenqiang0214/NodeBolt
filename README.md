@@ -8,8 +8,13 @@ manage subscriptions / connections, watch realtime traffic, all from the menu ba
 > 一个轻量的原生 **macOS 菜单栏应用**,通过 RESTful API 远程管理路由器上的
 > **Mihomo / OpenClash**:切节点、测延迟、看连接 / 订阅 / 实时流量,全在菜单栏完成,**无需 SSH**。
 
-<!-- 截图待补充 / screenshots TBD -->
-<!-- ![panel](docs/screenshot-panel.png) ![management](docs/screenshot-management.png) -->
+## 🖥 Requirements / 环境要求
+
+- **系统**:macOS 14 (Sonoma) 或更高
+- **CPU**:Universal —— **Apple Silicon(M 系列)与 Intel 均可**
+- **内核**:支持 RESTful 外部控制器的 **Mihomo / Clash.Meta**(已在 **v1.19.x** 实测;OpenClash 自带的 Mihomo 内核即可),并已开启外部控制器(API 地址 + Secret)
+
+<!-- 截图占位:docs/ 放入图片后,这里改成 Screenshots 表格 -->
 
 ## ✨ Features / 功能
 
