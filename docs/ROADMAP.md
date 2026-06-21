@@ -55,9 +55,10 @@
 - ✅ 12.4 节点排序(默认/延迟/名称,Phase 9 已做)
 - 🔜 12.5 中英文双语
 
-### Phase 13 · 开源发布(终极目标)
-- 11.1 git 仓库 + .gitignore + MIT LICENSE
-- 11.2 README(中英 + 截图/GIF)
-- 11.3 打包 .dmg
-- 11.4 代码签名 + 公证(双击无警告安装)
-- 11.5 Homebrew Cask + GitHub Releases + 贡献指南
+### Phase 13 · 开源发布 ✅(已上线)
+仓库:https://github.com/zhangwenqiang0214/NodeBolt
+- ✅ 13.1 git 仓库 + .gitignore + MIT LICENSE
+- ✅ 13.2 README(中英;截图待补)
+- ✅ 13.3 打包 .dmg
+- ✅ 13.4 GitHub Release v0.1.0(附 dmg)
+- 🔜 13.5 后续:代码签名+公证 / Homebrew Cask / 截图 / 贡献指南 / Keychain / 中英文双语
