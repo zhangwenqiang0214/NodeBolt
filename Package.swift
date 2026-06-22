@@ -13,7 +13,17 @@ let package = Package(
         .executableTarget(
             name: "NodeBolt",
             dependencies: ["NodeBoltCore"],
-            path: "Sources/NodeBolt"
+            path: "Sources/NodeBolt",
+            linkerSettings: [
+                // 把 Info.plist 嵌进可执行文件:即便在 Xcode 直接 ▶️ 跑裸二进制,
+                // ATS 例外 / 包标识 也会生效(LSUIElement 另由代码 setActivationPolicy 兜底)
+                .unsafeFlags([
+                    "-Xlinker", "-sectcreate",
+                    "-Xlinker", "__TEXT",
+                    "-Xlinker", "__info_plist",
+                    "-Xlinker", "Resources/Info.plist"
+                ])
+            ]
         ),
         // 集成测试程序(对本地 mock 跑真实 API;不依赖 XCTest,命令行工具即可运行)
         .executableTarget(

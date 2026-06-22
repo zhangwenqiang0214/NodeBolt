@@ -15,6 +15,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSPopoverDelegate {
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         AppDelegate.shared = self
+        NSApp.setActivationPolicy(.accessory)   // 菜单栏程序:无 Dock 图标(从 Xcode 裸跑也生效)
 
         popover.behavior = .transient
         popover.delegate = self
